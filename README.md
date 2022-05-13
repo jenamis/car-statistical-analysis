@@ -3,12 +3,12 @@
 ## Overview
 The purpose of this project was to perform statistical analysis on data related to the production of MechaCar prototypes in order to provide insights to the manufacturing team. 
 
-All statistical analysis was performed in R using a [mileage per gallon (MPG) dataset](Resources/MechaCar_mpg.csv] and a [suspension coil dataset](Resources/Suspension_Coil.csv). The R Script for the analysis can be found [here](CarAnalysisScript.R).
+All statistical analysis was performed in R using a [mileage per gallon (MPG) dataset](Resources/MechaCar_mpg.csv) and a [suspension coil dataset](Resources/Suspension_Coil.csv). The R Script for the analysis can be found [here](CarAnalysisScript.R).
 
 ## Linear Regression to Predict MPG
 Multiple linear regression analysis was performed to identify which variables in the MPG dataset predict the MPG of the MechaCar prototypes. The independent variables included in the analysis were vehicle length, vehicle weight, spoiler angle, ground clearance, and all-wheel drive (AWD). As shown in the screenshot below, based on a statistical significance level of 0.05, vehicle length (p-value = 2.6 x 10 ^ -12) and ground clearance (p-value = 5.2 x 10 ^ -8) provide a non-random amount of variance to the MPG values in the dataset, while vehicle weight (p-value = 0.078), spoiler angle (p-value = 0.31), and AWD (p-value = 0.19) do not. The r-squared value of the multiple linear regression model is 0.71, which means that the model explains 71% of the variability in MPG. The p-value for the model is 5.4 x 10 ^ -11, again much smaller than our statistical significance level of 0.05, which allows us to reject the null hypothesis that the slope of our model is zero. Although the r-squared value of the multiple linear regression model indicates that it performs well in explaining the variability in MPG for the existing dataset, the fact that three out of five independent variables are not statistically significant is evidence of overfitting and the model may not predict future MPG data effectively.  Additionally, the intercept of the multiple regression model is statistically significant, which could mean that the statistically significant variables (vehicle length and ground clearance) need scaling/transforming to improve the model or that other variables not available in the dataset explain some of the variability in MPG. Ultimately, additional testing of the model with modifications to the independent variables seems warranted.
 
-![img1](Resources/ Linear_Regression_MPG.png)
+![img1](Resources/Linear_Regression_MPG.png)
 
 
 ## Summary Statistics on Suspension Coils
@@ -16,12 +16,12 @@ Mean, median, variance, and standard deviation for the weight capacity of suspen
 
 **Summary Statistics for All Manufacturing Lots Combined**
 
-![img2](Resources/ Total_Summary.png)
+![img2](Resources/Total_Summary.png)
 
 
 **Summary Statistics for Individual Manufacturing Lots**
 
-![img3](Resources/ Lot_Summary.png)
+![img3](Resources/Lot_Summary.png)
 
 
 ## T-Tests on Suspension Coils
@@ -29,22 +29,22 @@ T-tests were performed to determine if the weight capacity (PSI) of the suspensi
 
 As shown in the screenshot below of the t-test results for all three manufacturing lots combined, the mean weight capacity of the suspension coils produced was 1498.8 PSI, which was not statistically significantly different from the population mean of 1500 PSI based on a statistical significance level of 0.05 (p-value = 0.060).  
 
-![img4](Resources/ All_Lot_TTest.png)
+![img4](Resources/All_Lot_TTest.png)
 
 
 As shown in the screenshot below of the t-test for lot 1 only, the mean weight capacity of the suspension coils produced was equal to the population mean of 1500 PSI and the p-value was 1, indicating no statistical difference.
 
-![img5](Resources/ Lot1_TTest.png)
+![img5](Resources/Lot1_TTest.png)
 
 As shown in the screenshot below of the t-test for lot 2 only, the mean weight capacity of the suspension coils produced was 1500.2 PSI, which was not statistically significantly different from the population mean of 1500 PSI based on a statistical significance level of 0.05 (p-value = 0.61).
 
 
-![img6](Resources/ Lot2_TTest.png)
+![img6](Resources/Lot2_TTest.png)
 
 
 As shown in the screenshot below of the t-test for lot 3 only, the mean weight capacity of suspension coils produced by this lot (1496.1 PSI) was statistically significantly different from the population mean of 1500 PSI based on a statistical significance level of 0.05 (p-value = 0.042). Aligning with what we observed from the summary statistics for lot 3 above, production of suspension coils by this manufacturing lot appears to differ from the other two lots and not be consistent with manufacturing standards.
 
-![img7](Resources/ Lot3_TTest.png)
+![img7](Resources/Lot3_TTest.png)
 
 
 ## Study Design: Our Prototype vs. the Competition
